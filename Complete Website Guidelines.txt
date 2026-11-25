@@ -1,0 +1,52 @@
+Assignment 1
+Name:- Hajra Iftikhar
+ID:- 41267
+Department:- BS(CS)
+Subject:- Web Engineering
+Date:- 25-11-2026
+
+Website Setup Guide
+
+1. Open the website in VS Code
+Extract hajra-portfolio-updated.zip. Open the portfolio folder in VS Code using File > Open Folder. Install Live Server, right-click index.html and select Open with Live Server.
+
+2. Git and GitHub
+Open the VS Code terminal. Run the commands in order.
+
+git init -b main
+git add index.html
+git commit -m "Create home page"
+git add hobbies.html
+git commit -m "Add hobby lists and game tables"
+git add media.html
+git commit -m "Add media content"
+git add contact.html
+git commit -m "Create contact page"
+git add css/style.css
+git commit -m "Style website layout"
+git add images/favicon.svg
+git commit -m "Add website favicon"
+git add images/workspace.svg
+git commit -m "Add local image"
+
+Make and save actual personal edits to the introduction, hobbies and contact information, then run:
+
+git add index.html
+git commit -m "Personalize introduction"
+git add hobbies.html
+git commit -m "Update hobby and game preferences"
+git add contact.html
+git commit -m "Complete contact details"
+git log --oneline
+
+3. Publish the website
+Create a public repository on GitHub. Copy the remote setup commands shown by GitHub and run them in the VS Code terminal. Open Settings > Pages. Select Deploy from a branch, main, and / (root). Save.
+
+Repository link:
+Live link:
+
+4. Validate HTML and CSS
+Use https://validator.w3.org/nu/ for each of the four HTML pages. Use https://jigsaw.w3.org/css-validator/ for css/style.css. Correct any errors and capture the results.
+
+5. Report screenshots
+Capture the four desktop pages, Home and Contact at 375 px, and the table hover effect. Capture the HTML and CSS validator results, GitHub repository file list, commit history and Pages settings. Use the actual live URL in the address bar for website screenshots.
