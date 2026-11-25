@@ -1,0 +1,87 @@
+/* Shared colours, spacing and typography for all four pages. */
+:root { --ink: #192e32; --muted: #526568; --accent: #176b61; --paper: #f5f7f4; --white: #fff; --line: #d6e1dc; --soft: #e2eee8; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Times New Roman", Times, serif; line-height: 1.65; color: var(--ink); background: var(--paper); overflow-wrap: break-word; min-height: 100vh; display: flex; flex-direction: column; }
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 15px 0; }
+.brand { display: flex; align-items: center; gap: 9px; color: var(--ink); font-weight: bold; text-decoration: none; white-space: nowrap; }
+/* Flexbox navigation. */
+nav { display: flex; flex-wrap: wrap; gap: 5px; }
+nav a { padding: 8px 12px; border-radius: 6px; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: bold; }
+nav a:hover, nav a[aria-current="page"] { background: var(--soft); color: var(--accent); }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #76a89b; outline-offset: 2px; }
+.main-content { padding: 36px 0 50px; flex: 1; }
+h1,h2,h3,p { margin-top: 0; }
+h1 { font-size: 42px; line-height: 1.16; margin-bottom: 16px; }
+h2 { font-size: 25px; line-height: 1.3; margin-bottom: 16px; }
+h3 { font-size: 19px; line-height: 1.35; margin-bottom: 10px; }
+p { margin-bottom: 15px; }
+.eyebrow { font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 10px; }
+.accent { color: var(--accent); }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr); align-items: center; gap: 35px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 40px; }
+.hero-copy { color: var(--muted); font-size: 18px; max-width: 560px; }
+img { display: block; max-width: 100%; height: auto; }
+.hero-image { width: 100%; border-radius: 10px; }
+.button { display: inline-block; border: 0; background: var(--accent); color: white; text-decoration: none; font: inherit; font-weight: bold; border-radius: 7px; padding: 10px 20px; cursor: pointer; }
+.button:hover { background: #114b44; }
+.section-block { margin-top: 28px; }
+.home-cards, .two-cards, .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.home-cards { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.panel { min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.panel p:last-child { margin-bottom: 0; }
+.number { display: inline-block; color: var(--accent); font-weight: bold; font-size: 13px; margin-bottom: 14px; }
+.page-heading { margin-bottom: 25px; }
+.page-heading > p:last-child, .muted { color: var(--muted); }
+ol, ul { padding-left: 24px; margin: 0; }
+li { margin: 5px 0; }
+/* Tables have borders, alternate backgrounds and row hover. */
+table { width: 100%; border-collapse: collapse; table-layout: fixed; background: white; font-size: 15px; }
+caption { text-align: left; color: var(--muted); padding-bottom: 8px; }
+th, td { border: 1px solid var(--line); text-align: left; padding: 12px; overflow-wrap: break-word; }
+th { background: #24564f; color: white; }
+tbody tr:nth-child(even) { background: #eff4f0; }
+tbody tr:hover { background: #cce5d9; }
+/* CSS Grid places social content on the left and videos on the right. */
+.media-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+.media-column { min-width: 0; }
+.media-column > .panel { margin: 0 0 16px; }
+blockquote { border-left: 3px solid var(--accent); margin: 12px 0; padding: 8px 12px; background: var(--paper); }
+.image-card img { width: 100%; border-radius: 7px; }
+figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+iframe { display: block; width: 100%; border: 0; background: var(--soft); border-radius: 7px; }
+.video-card iframe { aspect-ratio: 16 / 9; margin: 10px 0; }
+.video-card .muted { font-size: 14px; margin: 0; }
+.map { height: 300px; }
+.details { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 8px; margin: 0 0 25px; }
+dt { font-weight: bold; } dd { margin: 0; color: var(--muted); }
+.friend-list { margin-bottom: 10px; }
+/* The contact form uses HTML validation and CSS only. */
+label { display: block; font-weight: bold; margin: 12px 0 5px; }
+input, textarea { display: block; width: 100%; padding: 10px 12px; font: inherit; color: var(--ink); background: var(--white); border: 1px solid #a8bdb4; border-radius: 6px; }
+textarea { resize: vertical; }
+form .button { margin-top: 15px; }
+.site-footer { border-top: 1px solid var(--line); background: var(--white); color: var(--muted); }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 17px 0; font-size: 13px; }
+.footer-inner a { text-decoration: none; }
+/* At phone widths, stack columns and allow navigation to wrap. */
+@media (max-width: 640px) {
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 9px; padding: 10px 0; }
+  nav { width: 100%; gap: 3px; }
+  nav a { font-size: 13px; padding: 7px 8px; }
+  .main-content { padding: 23px 0 32px; }
+  h1 { font-size: 32px; } h2 { font-size: 22px; }
+  .hero, .home-cards, .two-cards, .contact-grid, .media-grid { grid-template-columns: minmax(0,1fr); gap: 15px; }
+  .hero, .panel { padding: 17px; }
+  .hero-copy { font-size: 16px; }
+  th, td { padding: 8px 6px; font-size: 13px; }
+  .details { grid-template-columns: 85px minmax(0,1fr); }
+  .map { height: 240px; }
+}
+
+/* Assignment information shown on every page. */
+.assignment-details { text-align: center; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-bottom: 24px; }
+.assignment-details h2 { font-size: 36px; margin-bottom: 10px; }
+.assignment-details p { font-size: 17px; line-height: 1.35; margin: 3px 0; }
+@media (max-width: 640px) { .assignment-details h2 { font-size: 30px; } .assignment-details p { font-size: 16px; } }
